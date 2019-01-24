@@ -29,7 +29,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/torian
 This app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Code of Conduct
-Everyone interacting in the Crawford-Wedding project's codebases, issue trackers, chat rooms, and mailing lists are expected to follow the [code of conduct](https://github.com/torianne02/crawford-wedding-frontend/blob/master/CODE_OF_CONDUCT.md)
+Everyone interacting in the Crawford-Wedding project's codebases, issue trackers, chat rooms, and mailing lists are expected to follow the [code of conduct](https://github.com/torianne02/crawford-wedding-frontend/blob/master/CODE_OF_CONDUCT.md).
 
 ## Credits
 Project structure developed with create-react-app.
