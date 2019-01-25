@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+// will need to import Guests component
 
 class GuestList extends Component {
   constructor(props) {
