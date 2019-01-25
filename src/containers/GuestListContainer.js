@@ -14,22 +14,7 @@ class GuestList extends Component {
     // need to write fetch statement
   }
 
-  renderGuests = () => {
-    return this.state.guests.map(guest => {
-      return (
-        <div classname="guest">
-          <p>{ guest.name }</p>
-          // maybe want to turn name into link for guest show page
-        </div>
-      )
-    })
-  }
-
   render() {
-    return (
-      <div className="guest-list">
-        { this.renderGuests() }
-      </div>
-    )
+    return <GuestList guests={this.state.books} />
   }
 }
