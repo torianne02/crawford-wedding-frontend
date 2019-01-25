@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// will need to import Guests component
+import Guests from '../components/guests/Guests';
 
 class GuestList extends Component {
   constructor(props) {
@@ -16,6 +16,6 @@ class GuestList extends Component {
   }
 
   render() {
-    return <GuestList guests={this.state.books} />
+    return <Guests guests={this.state.books} />
   }
 }
