@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
+// still need to pass props into form and have onChange and onSubmit
+
 class RsvpForm extends Component {
   render() {
     return (
@@ -37,3 +39,5 @@ class RsvpForm extends Component {
     );
   }
 }
+
+export default RsvpForm
