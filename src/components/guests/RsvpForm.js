@@ -28,6 +28,10 @@ class RsvpForm extends Component {
             </Label>
           </FormGroup>
         </FormGroup>
+        <FormGroup>
+          <Label for="song-requests">Song Requests</Label>
+          <Input type="textarea" name="song-requests" />
+        </FormGroup>
         <Button>Submit</Button>
       </Form>
     );
