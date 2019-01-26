@@ -19,7 +19,9 @@ class GuestList extends Component {
   // need to have methods for onSubmit and onChange of form
 
   render() {
-    return <Guests guests={this.state.books} />
+    // return <Guests guests={this.state.books} />
     // need to render form
   }
 }
+
+export default GuestList
