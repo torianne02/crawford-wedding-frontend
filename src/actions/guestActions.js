@@ -4,7 +4,7 @@ export function fetchGuest(id) {
 }
 
 export function addRsvp() {
-  // need to pass in variables 
+  // need to pass in variables
   // create new instance of guest and rsvp
   // 'POST' request to `http://localhost:3001/guests/${id}`
 }
