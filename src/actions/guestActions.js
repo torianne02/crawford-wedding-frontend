@@ -2,7 +2,8 @@ export function fetchGuest(id) {
   return(dispatch) => {
     dispatch({type: 'FETCH_GUEST'});
     fetch(`http://localhost:3001/guests/${id}`, {
-      method: 'GET'})
+      method: 'GET'
+    })
     .then(response => response.json())
     .then(data => dispatch({type: 'ADD_GUEST_TO_STATE', data: data}))
   }
@@ -15,6 +16,12 @@ export function addRsvp() {
 }
 
 export function fetchAllGuests() {
-  // fetch all guests
-  // 'GET' request to `http://localhost:3001/guests`
+  return (dispatch) => {
+    dispatch({type: 'FETCH_ALL_GUESTS'});
+    fetch(`http://localhost:3001/guests`, {
+      method: 'GET'
+    })
+    .then(response => response.json())
+    .then(data => dispatch({type: 'ADD_ALL_GUESTS_TO_STATE', data: data}))
+  }
 }
