@@ -11,12 +11,17 @@ export function fetchRsvp(id) {
 
 export function addRsvp(name, email, accept, attendees, song_request) {
   return (dispatch) => {
-    // const body = JSON.stringify({})
+    const body = JSON.stringify({name: name, email: email, accept: accept,
+      attendees: attendees, song_request: song_request})
+    dispatch({ type: 'RSVP_REQUEST' })
+    return fetch(`http://localhost:3001/rsvps/${id}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: body
+    })
+    .then(response => response.json())
+    .then(data => dispatch({type: 'ADD_RSVP_TO_STATE', data: data}))
   }
-
-  // need to pass in variables
-  // create new instance of guest and rsvp
-  // 'POST' request to `http://localhost:3001/guests/${id}`
 }
 
 export function fetchAllRsvps() {
