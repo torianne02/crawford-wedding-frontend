@@ -9,4 +9,4 @@ const GuestList = ( props ) => {
   );
 }
 
-export default Guests
+export default GuestList
