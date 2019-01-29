@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 // import Guests from '../components/guests/Guests';
-// import RsvpForm from '../components/guests/RsvpForm';
 // import { fetchAllRsvps } from '../actions/rsvpActions';
 
-class GuestList extends Component {
+class GuestListContainer extends Component {
   constructor(props) {
     super(props);
     console.log('in constructor')
@@ -30,4 +29,6 @@ class GuestList extends Component {
   }
 }
 
-export default GuestList
+
+export default GuestListContainer
+// export default connect( mapStateToProps )( GuestListContainer )
