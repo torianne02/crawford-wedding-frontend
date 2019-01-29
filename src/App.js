@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+// import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import GuestListContainer from './containers/GuestListContainer';
 import './App.css';
