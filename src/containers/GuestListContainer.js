@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Guests from '../components/guests/Guests';
-import RsvpForm from '../components/guests/RsvpForm';
+// import Guests from '../components/guests/Guests';
+// import RsvpForm from '../components/guests/RsvpForm';
 
 class GuestList extends Component {
   constructor(props) {
@@ -19,6 +19,9 @@ class GuestList extends Component {
   // need to have methods for onSubmit and onChange of form
 
   render() {
+    return (
+      "GuestList Container entered!"
+    )
     // return <Guests guests={this.state.books} />
     // need to render form
   }
