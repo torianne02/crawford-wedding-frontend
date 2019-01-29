@@ -11,7 +11,7 @@ export function fetchRsvp(id) {
 
 export function addRsvp(name, email, accept, attendees, song_request) {
   return (dispatch) => {
-    const body = JSON.stringify({})
+    // const body = JSON.stringify({})
   }
 
   // need to pass in variables
