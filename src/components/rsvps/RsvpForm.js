@@ -5,7 +5,7 @@ const RsvpForm = props => {
 
   return (
     <Container className="RSVP">
-      <Form onSubmit={event => this.handleSubmit(event)}>
+      <Form onSubmit={ props.handleOnSubmit }>
         <Col>
           <FormGroup>
             <Label for="name" hidden>Name</Label>
