@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import RsvpForm from '../components/rsvps/RsvpForm';
+import { addRsvp } from '../actions/rsvpActions';
+import { connect } from 'react-redux';
 
 class RsvpContainer extends Component {
   constructor(props) {
@@ -64,5 +66,11 @@ class RsvpContainer extends Component {
   }
 }
 
-export default RsvpContainer
-// export default connect( mapStateToProps )( RsvpContainer )
+// will display list of people who have responded to rsvps
+function mapStateToProps( state ){
+  return {
+    rsvps: state.rsvps
+  }
+}
+
+export default connect( mapStateToProps, { addRsvp } )( RsvpContainer )
