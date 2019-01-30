@@ -6,7 +6,7 @@ const RsvpForm = props => {
   return (
     <Container className="RSVP">
       <Form onSubmit={event => this.handleSubmit(event)}>
-          <Col md={6}>
+          <Col>
             <FormGroup>
               <Label for="name" hidden>Name</Label>
               <Input type="text"
@@ -16,7 +16,7 @@ const RsvpForm = props => {
                 value={ props.nameValue } />
             </FormGroup>
           </Col>
-          <Col md={6}>
+          <Col>
             <FormGroup>
               <Label for="email" hidden>Email</Label>
               <Input type="email"
@@ -26,7 +26,7 @@ const RsvpForm = props => {
                 value={ props.emailValue } />
             </FormGroup>
           </Col>
-          <Col md={6}>
+          <Col>
             <FormGroup>
               <Label for="attendees" hidden>Number in Party</Label>
               <Input type="number"
@@ -36,7 +36,7 @@ const RsvpForm = props => {
                 value={ props.attendeesValue } />
             </FormGroup>
           </Col>
-          <Col md={6}>
+          <Col>
             <FormGroup>
               <Label for="songRequest" hidden>Song Request</Label>
               <Input type="text"
@@ -48,7 +48,7 @@ const RsvpForm = props => {
           </Col>
         <FormGroup tag="fieldset">
           <legend className="col-form-label col-md-6">Will your party be attending?</legend>
-          <Col md={6}>
+          <Col>
             <FormGroup check>
               <Label check>
                 <Input type="radio"
