@@ -35,17 +35,16 @@ class RsvpContainer extends Component {
     }
   }
 
- attendeesToInt = () => {
-    const num_attendees = parseInt(this.state.attendees)
-    return num_attendees
-  }
-
+  // validates that num of attendees is != 0 if accept = 'accepts'
   validate = () => {
-    if ( !isNaN(this.state.attendees) ) {
-      return alert('Please enter valid number attending')
+    if ( this.state.accept === 'accepts' && parseInt(this.state.attendees) === 0 ) {
+      return alert('Please enter number of guests in your party!')
+    } else if ( !this.state.name || !this.state.email ) {
+      return alert('Oops! Please make sure to fill out your name and email.')
     } else {
+      // converts str from form input to integer for state
       this.setState({
-        attendees: this.attendeesToInt(),
+        attendees: parseInt(this.state.attendees),
       });
       return true
     }
