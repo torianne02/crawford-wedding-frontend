@@ -12,7 +12,7 @@ const RsvpForm = props => {
             <Input type="text"
               name="name"
               placeholder="Full Name"
-              onChange={ props.handleNameOnChange }
+              onChange={ props.handleOnChange }
               value={ props.nameValue } />
           </FormGroup>
         </Col>
@@ -22,7 +22,7 @@ const RsvpForm = props => {
             <Input type="email"
               name="email"
               placeholder="Email"
-              onChange={ props.handleEmailOnChange }
+              onChange={ props.handleOnChange }
               value={ props.emailValue } />
           </FormGroup>
         </Col>
@@ -32,7 +32,7 @@ const RsvpForm = props => {
             <Input type="text"
               name="songRequest"
               placeholder="Song Request"
-              onChange={ props.handleSongRequestOnChange }
+              onChange={ props.handleOnChange }
               value={ props.songRequestValue } />
           </FormGroup>
         </Col>
@@ -41,7 +41,7 @@ const RsvpForm = props => {
             <Label for="attendees">Number of Guests Attending</Label>
             <Input type="number"
               name="attendees"
-              onChange={ props.handleAttendeesOnChange }
+              onChange={ props.handleOnChange }
               value={ props.attendeesValue } />
           </FormGroup>
         </Col>
@@ -52,7 +52,7 @@ const RsvpForm = props => {
               <Label check>
                 <Input type="radio"
                   name="accept"
-                  onChange={ props.handleAcceptOnChange }
+                  onChange={ props.handleOnChange }
                   value="accepts" checked={props.acceptValue === "accepts"} />{' '}
                 Accepts with pleasure.
               </Label>
@@ -61,7 +61,7 @@ const RsvpForm = props => {
               <Label check>
                 <Input type="radio"
                   name="accept"
-                  onChange={ props.handleAcceptOnChange }
+                  onChange={ props.handleOnChange }
                   value="declines" checked={props.acceptValue === "declines"} />{' '}
                 Declines with regret.
               </Label>

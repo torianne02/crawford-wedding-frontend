@@ -11,35 +11,12 @@ class RsvpContainer extends Component {
       songRequest: '',
       attendees: 0,
     };
+    this.handleOnChange = this.handleOnChange.bind(this);
   }
 
-  handleNameOnChange = event => {
+  handleOnChange = event => {
     this.setState({
-      name: event.target.value,
-    });
-  }
-
-  handleEmailOnChange = event => {
-    this.setState({
-      email: event.target.value,
-    });
-  }
-
-  handleAcceptOnChange = event => {
-    this.setState({
-      accept: event.target.value,
-    });
-  }
-
-  handleAttendeesOnChange = event => {
-    this.setState({
-      attendees: event.target.value,
-    });
-  }
-
-  handleSongRequestOnChange = event => {
-    this.setState({
-      songRequest: event.target.value,
+      [event.target.name]: event.target.value
     });
   }
 
@@ -77,16 +54,12 @@ class RsvpContainer extends Component {
   render() {
     return (
       <RsvpForm
+        handleOnChange={ this.handleOnChange }
         nameValue={ this.state.name }
-        handleNameOnChange={ this.handleNameOnChange }
         emailValue={ this.state.email }
-        handleEmailOnChange={ this.handleEmailOnChange }
         acceptValue={ this.state.accept }
-        handleAcceptOnChange={ this.handleAcceptOnChange }
         attendeesValue={ this.state.attendees }
-        handleAttendeesOnChange={ this.handleAttendeesOnChange }
         songRequestValue={ this.state.songRequest }
-        handleSongRequestOnChange={ this.handleSongRequestOnChange }
       />
     )
   }
