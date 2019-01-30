@@ -6,46 +6,45 @@ const RsvpForm = props => {
   return (
     <Container className="RSVP">
       <Form onSubmit={event => this.handleSubmit(event)}>
-          <Col>
-            <FormGroup>
-              <Label for="name" hidden>Name</Label>
-              <Input type="text"
-                name="name"
-                placeholder="Full Name"
-                onChange={ props.handleNameOnChange }
-                value={ props.nameValue } />
-            </FormGroup>
-          </Col>
-          <Col>
-            <FormGroup>
-              <Label for="email" hidden>Email</Label>
-              <Input type="email"
-                name="email"
-                placeholder="Email"
-                onChange={ props.handleEmailOnChange }
-                value={ props.emailValue } />
-            </FormGroup>
-          </Col>
-          <Col>
-            <FormGroup>
-              <Label for="attendees" hidden>Number in Party</Label>
-              <Input type="number"
-                name="attendees"
-                placeholder="Number in Party"
-                onChange={ props.handleAttendeesOnChange }
-                value={ props.attendeesValue } />
-            </FormGroup>
-          </Col>
-          <Col>
-            <FormGroup>
-              <Label for="songRequest" hidden>Song Request</Label>
-              <Input type="text"
-                name="songRequest"
-                placeholder="Song Request"
-                onChange={ props.handleSongRequestOnChange }
-                value={ props.songRequestValue } />
-            </FormGroup>
-          </Col>
+        <Col>
+          <FormGroup>
+            <Label for="name" hidden>Name</Label>
+            <Input type="text"
+              name="name"
+              placeholder="Full Name"
+              onChange={ props.handleNameOnChange }
+              value={ props.nameValue } />
+          </FormGroup>
+        </Col>
+        <Col>
+          <FormGroup>
+            <Label for="email" hidden>Email</Label>
+            <Input type="email"
+              name="email"
+              placeholder="Email"
+              onChange={ props.handleEmailOnChange }
+              value={ props.emailValue } />
+          </FormGroup>
+        </Col>
+        <Col>
+          <FormGroup>
+            <Label for="songRequest" hidden>Song Request</Label>
+            <Input type="text"
+              name="songRequest"
+              placeholder="Song Request"
+              onChange={ props.handleSongRequestOnChange }
+              value={ props.songRequestValue } />
+          </FormGroup>
+        </Col>
+        <Col>
+          <FormGroup>
+            <Label for="attendees">Number of Guests Attending</Label>
+            <Input type="number"
+              name="attendees"
+              onChange={ props.handleAttendeesOnChange }
+              value={ props.attendeesValue } />
+          </FormGroup>
+        </Col>
         <FormGroup tag="fieldset">
           <legend className="col-form-label col-md-6">Will your party be attending?</legend>
           <Col>

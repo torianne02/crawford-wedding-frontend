@@ -7,7 +7,7 @@ class RsvpContainer extends Component {
     this.state = {
       name: '',
       email: '',
-      accept: '',
+      accept: 'accepts',
       songRequest: '',
       attendees: 0,
     };
@@ -58,11 +58,20 @@ class RsvpContainer extends Component {
     }
   }
 
+ attendeesToInt = () => {
+    const num_attendees = parseInt(this.state.attendees)
+    return num_attendees
+  }
+
   validate = () => {
-    if ( !this.state.accept ) {
-      return alert('Please mark attendance status')
+    if ( !isNaN(this.state.attendees) ) {
+      return alert('Please enter valid number attending')
+    } else {
+      this.setState({
+        attendees: this.attendeesToInt(),
+      });
+      return true
     }
-    return true
   }
 
   render() {
