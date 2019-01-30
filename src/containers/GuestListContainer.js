@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 // import Guests from '../components/guests/Guests';
-// import { fetchAllRsvps } from '../actions/rsvpActions';
+import { fetchGuestList } from '../actions/guestListActions';
 
 class GuestListContainer extends Component {
   constructor(props) {
     super(props);
-    console.log('in constructor')
     this.state = {
-      guests: ['Tori', 'Kevin']
+      guests: []
     };
   }
 
@@ -29,6 +28,12 @@ class GuestListContainer extends Component {
   }
 }
 
+function mapDispatchToProps( dispatch ) {
+  return { fetchGuestList: () => dispatch(fetchGuestList()) }
+}
 
-export default GuestListContainer
-// export default connect( mapStateToProps )( GuestListContainer )
+function mapStateToProps( state ) {
+  return { guests: state.guests }
+}
+
+export default connect( mapStateToProps, mapDispatchToProps )( GuestListContainer )
