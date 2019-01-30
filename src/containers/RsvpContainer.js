@@ -8,8 +8,8 @@ class RsvpContainer extends Component {
       name: '',
       email: '',
       accept: '',
+      songRequest: '',
       attendees: 0,
-      song_request: ''
     };
   }
 
@@ -39,7 +39,7 @@ class RsvpContainer extends Component {
 
   handleSongRequestOnChange = event => {
     this.setState({
-      song_request: event.target.value,
+      songRequest: event.target.value,
     });
   }
 
@@ -47,13 +47,13 @@ class RsvpContainer extends Component {
     event.preventDefault();
     if (this.validate()) {
       this.props.addRsvp( this.state.name, this.state.email, this.state.accept,
-        this.state.attendees, this.state.song_request )
+        this.state.attendees, this.state.songRequest )
       this.setState({
         name: '',
         email: '',
         accept: '',
         attendees: 0,
-        song_request: ''
+        songRequest: '',
       })
     }
   }
@@ -76,7 +76,7 @@ class RsvpContainer extends Component {
         handleAcceptOnChange={ this.handleAcceptOnChange }
         attendeesValue={ this.state.attendees }
         handleAttendeesOnChange={ this.handleAttendeesOnChange }
-        songRequestValue={ this.state.songRequestValue }
+        songRequestValue={ this.state.songRequest }
         handleSongRequestOnChange={ this.handleSongRequestOnChange }
       />
     )
