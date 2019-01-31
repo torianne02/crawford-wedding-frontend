@@ -2,14 +2,15 @@ import React from 'react';
 import Guest from './Guest';
 
 const GuestList = ( {guestList} ) => {
-  // const renderGuestList = guestList.map(guest =>
-  //   <p key={guest.id}>{guest.name}</p>
-  // )
-  // return (
-  //   <div className="guest-list">
-  //     { renderGuestList }
-  //   </div>
-  // );
+
+  return (
+    <div className="guest-list">
+      { guestList.map(( guest ) => {
+          return <Guest key={ guest.id } name={ guest.name } songRequest={ guest.song_request } />
+        })
+      }
+    </div>
+  );
 }
 
 export default GuestList

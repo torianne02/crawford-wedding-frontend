@@ -3,7 +3,7 @@ import React from 'react';
 const Guest = ( props ) => {
   return (
     <div>
-      <p>{ props.name }</p>
+      <p>{ props.name }: { props.songRequest }</p>
     </div>
   );
 }
