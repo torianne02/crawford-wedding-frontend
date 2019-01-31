@@ -29,7 +29,7 @@ class RsvpContainer extends Component {
       email: this.state.email,
       accept: this.state.accept,
       attendees: this.attendeesToInt(),
-      song_requst: this.state.songRequest
+      song_request: this.state.songRequest
     }
 
     if (this.validate()) {
