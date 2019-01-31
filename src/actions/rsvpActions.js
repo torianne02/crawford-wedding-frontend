@@ -9,7 +9,7 @@ export function fetchRsvp(id) {
   }
 }
 
-export function addRsvp(rsvp) {
+export function createRsvp(rsvp) {
   return (dispatch) => {
     dispatch({ type: 'RSVP_REQUEST' })
     return fetch(`http://localhost:3001/rsvps`, {

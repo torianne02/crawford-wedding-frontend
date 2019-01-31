@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RsvpForm from '../components/rsvps/RsvpForm';
-import { addRsvp } from '../actions/rsvpActions';
+import { createRsvp } from '../actions/rsvpActions';
 import { connect } from 'react-redux';
 
 class RsvpContainer extends Component {
@@ -31,9 +31,9 @@ class RsvpContainer extends Component {
       attendees: this.attendeesToInt(),
       song_requst: this.state.songRequest
     }
-    
+
     if (this.validate()) {
-      this.props.addRsvp(rsvp)
+      this.props.createRsvp(rsvp)
       this.setState({
         name: '',
         email: '',
@@ -85,4 +85,4 @@ function mapStateToProps( state ){
   }
 }
 
-export default connect( mapStateToProps, { addRsvp } )( RsvpContainer )
+export default connect( mapStateToProps, { createRsvp } )( RsvpContainer )
