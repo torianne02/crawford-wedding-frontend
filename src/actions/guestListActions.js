@@ -1,7 +1,7 @@
 export function fetchGuestList() {
   return (dispatch) => {
     dispatch({type: 'FETCH_GUEST_LIST'});
-    fetch(`http://localhost:3001/guest_list`, {
+    fetch(`http://localhost:3001/attending`, {
       method: 'GET'
     })
     .then(response => response.json())
