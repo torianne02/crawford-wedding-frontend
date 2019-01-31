@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import Guests from '../components/guests/Guests';
+import GuestList from '../components/guests/GuestList';
 import { fetchGuestList } from '../actions/guestListActions';
 
 class GuestListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      guestList: []
+      guestList: [{name: 'Tori', id: 1}, {name: 'Kevin', id: 2}]
     };
   }
 
@@ -21,7 +21,9 @@ class GuestListContainer extends Component {
 
   render() {
     return (
-      "GuestList Container entered!"
+      <div className="guestList">
+        <GuestList props={this.state.guestList}/>
+      </div>
     )
     // return <Guests guests={this.state.guests} />
     // need to render form
