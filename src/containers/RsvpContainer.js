@@ -24,9 +24,16 @@ class RsvpContainer extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
+    const rsvp = {
+      name: this.state.name,
+      email: this.state.email,
+      accept: this.state.accept,
+      attendees: this.attendeesToInt(),
+      song_requst: this.state.songRequest
+    }
+    
     if (this.validate()) {
-      this.props.addRsvp( this.state.name, this.state.email, this.state.accept,
-        this.attendeesToInt(), this.state.songRequest )
+      this.props.addRsvp(rsvp)
       this.setState({
         name: '',
         email: '',
