@@ -22,11 +22,11 @@ class RsvpContainer extends Component {
     });
   }
 
-  handleSubmit = event => {
+  handleOnSubmit = event => {
     event.preventDefault();
     if (this.validate()) {
       this.props.addRsvp( this.state.name, this.state.email, this.state.accept,
-        this.state.attendees, this.state.songRequest )
+        this.attendeesToInt(), this.state.songRequest )
       this.setState({
         name: '',
         email: '',
@@ -37,6 +37,14 @@ class RsvpContainer extends Component {
     }
   }
 
+  attendeesToInt = () => {
+   const num_attendees = parseInt(this.state.attendees)
+   this.setState({
+     attendees: num_attendees
+   })
+   return num_attendees
+  }
+
   // validates that num of attendees is != 0 if accept = 'accepts'
   validate = () => {
     if ( this.state.accept === 'accepts' && parseInt(this.state.attendees) === 0 ) {
@@ -44,10 +52,6 @@ class RsvpContainer extends Component {
     } else if ( !this.state.name || !this.state.email ) {
       return alert('Oops! Please make sure to fill out your name and email.')
     } else {
-      // converts str from form input to integer for state
-      this.setState({
-        attendees: parseInt(this.state.attendees),
-      });
       return true
     }
   }
@@ -55,12 +59,13 @@ class RsvpContainer extends Component {
   render() {
     return (
       <RsvpForm
-        handleOnChange={ this.handleOnChange }
         nameValue={ this.state.name }
         emailValue={ this.state.email }
         acceptValue={ this.state.accept }
         attendeesValue={ this.state.attendees }
         songRequestValue={ this.state.songRequest }
+        handleOnChange={ this.handleOnChange }
+        handleOnSubmit={ this.handleOnSubmit }
       />
     )
   }
