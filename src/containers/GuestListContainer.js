@@ -7,23 +7,27 @@ class GuestListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      guestList: [{name: 'Tori', id: 1}, {name: 'Kevin', id: 2}]
+      guestList: []
     };
   }
 
   componentDidMount() {
-    // need to write fetch statement
-    console.log("in component did mount")
-    console.log(this.state)
+    // debugger
+    // let guestList = fetchGuestList()
+    // this.setState({
+    //   guestList: guestList
+    // })
   }
 
   // need to have methods for onSubmit and onChange of form
 
   render() {
     return (
-      <div className="guestList">
-        <GuestList props={this.state.guestList}/>
-      </div>
+      "Hello from GuestList Container"
+      // console.log(this.state.guestList),
+      // <div className="guestList">
+      //   // <GuestList guestList={ this.state.guestList }/>
+      // </div>
     )
     // return <Guests guests={this.state.guests} />
     // need to render form

@@ -16,7 +16,10 @@ export function addRsvp(name, email, accept, attendees, songRequest) {
     dispatch({ type: 'RSVP_REQUEST' })
     return fetch(`http://localhost:3001/rsvps`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
       body: body
     })
     .then(response => response.json())
