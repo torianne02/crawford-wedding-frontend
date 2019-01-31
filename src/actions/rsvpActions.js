@@ -12,9 +12,9 @@ export function fetchRsvp(id) {
 export function addRsvp(name, email, accept, attendees, songRequest) {
   return (dispatch) => {
     const body = JSON.stringify({name: name, email: email, accept: accept,
-      attendees: attendees, songRequest: songRequest})
+      attendees: attendees, song_request: songRequest})
     dispatch({ type: 'RSVP_REQUEST' })
-    return fetch(`http://localhost:3001/rsvps/${name}`, {
+    return fetch(`http://localhost:3001/rsvps`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: body
