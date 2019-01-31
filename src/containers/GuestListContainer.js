@@ -12,22 +12,26 @@ class GuestListContainer extends Component {
   }
 
   componentDidMount() {
-    // debugger
-    // let guestList = fetchGuestList()
+    // let guestList = this.fetchGuestList()
     // this.setState({
     //   guestList: guestList
     // })
+    fetch(`http://localhost:3001/attending`, {
+      method: 'GET'
+    })
+    .then(response => response.json())
+    .then(guestList => this.setState({ guestList }))
   }
 
   // need to have methods for onSubmit and onChange of form
 
   render() {
     return (
-      "Hello from GuestList Container"
-      // console.log(this.state.guestList),
-      // <div className="guestList">
-      //   // <GuestList guestList={ this.state.guestList }/>
-      // </div>
+      "Hello from GuestList Container",
+      console.log(this.state.guestList),
+      <div className="guestList">
+        <GuestList guestList={ this.state.guestList }/>
+      </div>
     )
     // return <Guests guests={this.state.guests} />
     // need to render form
