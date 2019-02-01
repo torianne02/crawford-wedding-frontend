@@ -1,19 +1,27 @@
 import React from 'react';
-// import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import GuestListContainer from './containers/GuestListContainer';
 import RsvpContainer from './containers/RsvpContainer';
+import NavBar from './components/NavBar';
+import RsvpForm from './components/rsvps/RsvpForm';
+// import Home from './components/Home';
 import './App.css';
 
 const App = () => {
   return (
     <Router>
       <div className="App">
-        <GuestListContainer />
-        <RsvpContainer />
+        <NavBar />
+        <Switch>
+          <Route exact path="/attending" component={GuestListContainer} />
+          <Route exact path="/rsvp" component={RsvpForm} />
+          <Route exact path="/rsvps" component={RsvpContainer} />
+        </Switch>
       </div>
     </Router>
   );
 }
 
 export default App;
+
+// <Route exact path="/" component={Home} />
