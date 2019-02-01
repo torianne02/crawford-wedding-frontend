@@ -45,5 +45,10 @@ a.navbar-brand {
 }
 
 a.nav-link {
-  color: #9AB973
+  color: #9AB973;
+}
+
+div.card-title {
+  font-family: 'Great Vibes';
+  font-size: 32px;
 }
