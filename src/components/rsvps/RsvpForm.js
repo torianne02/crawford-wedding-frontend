@@ -53,7 +53,9 @@ const RsvpForm = props => {
                 <Input type="radio"
                   name="accept"
                   onChange={ props.handleOnChange }
-                  value="accepts" checked={props.acceptValue === "accepts"} />{' '}
+                  value="accepts"
+                  checked={props.acceptValue === "accepts"}
+                />{' '}
                 Accepts with pleasure.
               </Label>
             </FormGroup>
@@ -62,7 +64,9 @@ const RsvpForm = props => {
                 <Input type="radio"
                   name="accept"
                   onChange={ props.handleOnChange }
-                  value="declines" checked={props.acceptValue === "declines"} />{' '}
+                  value="declines"
+                  checked={props.acceptValue === "declines"}
+                />{' '}
                 Declines with regret.
               </Label>
             </FormGroup>
