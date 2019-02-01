@@ -1,4 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Great+Vibes');
+@import url('http://fonts.googleapis.com/css?family=Cookie');
 
 .App {
   text-align: center;
@@ -35,7 +36,7 @@
 
 nav.navbar {
   background-color: transparent;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 a.navbar-brand {
@@ -51,4 +52,10 @@ a.nav-link {
 div.card-title {
   font-family: 'Great Vibes';
   font-size: 32px;
+}
+
+h1, h3 {
+  font-family: 'Cookie';
+  font-size: 65px;
+  color: #967BB6;
 }
