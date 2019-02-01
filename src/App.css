@@ -1,3 +1,5 @@
+@import url('http://fonts.googleapis.com/css?family=Great+Vibes');
+
 .App {
   text-align: center;
 }
@@ -29,4 +31,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+nav.navbar {
+  background-color: transparent;
+  margin-bottom: 30px;
+}
+
+a.navbar-brand {
+  font-family: 'Great Vibes';
+  font-size: 45px;
+  color: #FFB7CC;
+}
+
+a.nav-link {
+  color: #9AB973
 }
