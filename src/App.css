@@ -51,7 +51,19 @@ a.nav-link {
 
 div.card-title {
   font-family: 'Great Vibes';
-  font-size: 32px;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+p#detail-label {
+  font-size: 22px;
+  color: #848482;
+  margin-bottom: 0px;
+}
+
+p.card-text {
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 
 h1, h3 {
