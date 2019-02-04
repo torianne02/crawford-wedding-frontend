@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 // import Home from './components/Home';
 import Details from './components/Details';
 import OurStory from './components/OurStory';
+import Music from './components/Music';
 import './App.css';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/rsvp" component={RsvpContainer} />
           <Route path="/details" component={Details} />
           <Route path="/our-story" component={OurStory} />
+          <Route path="/music" component={Music} />
         </Switch>
       </div>
     </Router>
