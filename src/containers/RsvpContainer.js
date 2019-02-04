@@ -65,15 +65,18 @@ class RsvpContainer extends Component {
 
   render() {
     return (
-      <RsvpForm
-        nameValue={ this.state.name }
-        emailValue={ this.state.email }
-        acceptValue={ this.state.accept }
-        attendeesValue={ this.state.attendees }
-        songRequestValue={ this.state.songRequest }
-        handleOnChange={ this.handleOnChange }
-        handleOnSubmit={ this.handleOnSubmit }
-      />
+      <div className="rsvp-form">
+        <h1>RSVP</h1>
+        <RsvpForm
+          nameValue={ this.state.name }
+          emailValue={ this.state.email }
+          acceptValue={ this.state.accept }
+          attendeesValue={ this.state.attendees }
+          songRequestValue={ this.state.songRequest }
+          handleOnChange={ this.handleOnChange }
+          handleOnSubmit={ this.handleOnSubmit }
+        />
+      </div>
     )
   }
 }
