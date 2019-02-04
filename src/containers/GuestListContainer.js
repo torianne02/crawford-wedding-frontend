@@ -38,7 +38,8 @@ function mapDispatchToProps( dispatch ) {
 }
 
 function mapStateToProps( state ) {
-  return { guests: state.guests }
+  debugger
+  return { guestList: state.guestList }
 }
 
 export default connect( mapStateToProps, mapDispatchToProps )( GuestListContainer )
