@@ -23,18 +23,13 @@ class GuestListContainer extends Component {
     .then(guestList => this.setState({ guestList }))
   }
 
-  // need to have methods for onSubmit and onChange of form
-
   render() {
     return (
-      "Hello from GuestList Container",
-      console.log(this.state.guestList),
       <div className="guestList">
+        <h1>Attendees</h1>
         <GuestList guestList={ this.state.guestList }/>
       </div>
     )
-    // return <Guests guests={this.state.guests} />
-    // need to render form
   }
 }
 
