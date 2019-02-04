@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import GuestListContainer from './containers/GuestListContainer';
 import RsvpContainer from './containers/RsvpContainer';
 import NavBar from './components/NavBar';
-import RsvpForm from './components/rsvps/RsvpForm';
 // import Home from './components/Home';
 import Details from './components/Details';
 import OurStory from './components/OurStory';
@@ -14,7 +13,12 @@ const App = () => {
     <Router>
       <div className="App">
         <NavBar />
-        <RsvpContainer />
+        <Switch>
+          <Route path="/attending" component={GuestListContainer} />
+          <Route path="/rsvp" component={RsvpContainer} />
+          <Route path="/details" component={Details} />
+          <Route path="/our-story" component={OurStory} />
+        </Switch>
       </div>
     </Router>
   );
