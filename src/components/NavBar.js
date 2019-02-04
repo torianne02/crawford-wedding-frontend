@@ -18,6 +18,9 @@ const NavBar = () => {
         <NavItem>
           <NavLink href="/our-story">Our Story</NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink href="/music">Music</NavLink>
+        </NavItem>
       </Nav>
     </Navbar>
   )
