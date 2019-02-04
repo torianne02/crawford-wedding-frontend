@@ -9,20 +9,26 @@ const Details = () => {
           <Card className="ceremony-details">
             <CardBody>
               <CardTitle>Ceremony</CardTitle>
-              <CardText>Date: Sunday, August 09, 2020</CardText>
-              <CardText>Time: 4:00pm</CardText>
-              <CardText>Location: Convict Lake</CardText>
+              <CardText id="detail-label">Date:</CardText>
+              <CardText>Sunday, August 09, 2020</CardText>
+              <CardText id="detail-label">Time:</CardText>
+              <CardText>4:00pm</CardText>
+              <CardText id="detail-label">Location:</CardText>
+              <CardText>Convict Lake - Shell Beach</CardText>
             </CardBody>
           </Card>
         </Col>
         <Col sm="6">
           <Card className="reception-details">
-            <CardBody>
-              <CardTitle>Reception</CardTitle>
-              <CardText>Date: Sunday, August 09, 2020</CardText>
-              <CardText>Time: 6:00pm</CardText>
-              <CardText>Location: Convict Lake Resort</CardText>
-            </CardBody>
+          <CardBody>
+            <CardTitle>Reception</CardTitle>
+            <CardText id="detail-label">Date:</CardText>
+            <CardText>Sunday, August 09, 2020</CardText>
+            <CardText id="detail-label">Time:</CardText>
+            <CardText>6:00pm</CardText>
+            <CardText id="detail-label">Location:</CardText>
+            <CardText>Convict Lake Resort</CardText>
+          </CardBody>
           </Card>
         </Col>
       </Row>
