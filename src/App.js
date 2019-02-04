@@ -14,13 +14,7 @@ const App = () => {
     <Router>
       <div className="App">
         <NavBar />
-        <Switch>
-          <Route exact path="/attending" component={GuestListContainer} />
-          <Route exact path="/rsvp" component={RsvpForm} />
-          <Route exact path="/rsvps" component={RsvpContainer} />
-          <Route exact path="/details" component={Details} />
-          <Route exact path="/our-story" component={OurStory} />
-        </Switch>
+        <RsvpContainer />
       </div>
     </Router>
   );
