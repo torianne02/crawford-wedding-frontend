@@ -6,7 +6,11 @@ const GuestList = ( {guestList} ) => {
   return (
     <div className="guest-list">
       { guestList.map(( guest ) => {
-          return <Guest key={ guest.id } name={ guest.name } songRequest={ guest.song_request } />
+          return <Guest
+            key={ guest.id }
+            name={ guest.name }
+            attendees={guest.attendees}
+          />
         })
       }
     </div>
