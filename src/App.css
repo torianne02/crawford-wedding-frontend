@@ -50,9 +50,10 @@ a.nav-link {
 }
 
 div.card-title {
-  font-family: 'Great Vibes';
+  font-family: 'Cookie';
   font-size: 35px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  color: #967BB6;
 }
 
 p#detail-label {
