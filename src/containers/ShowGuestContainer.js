@@ -55,15 +55,24 @@ class ShowGuestContainer extends Component {
     const { activeIndex } = this.state;
 
     return (
-      <GuestCarousel
-        onExiting={ this.onExiting }
-        onExited={ this.onExited }
-        activeIndex={ activeIndex }
-        next={ this.next }
-        prev={ this.prev }
-        goToIndex={ this.goToIndex }
-        guestList={ this.props.guestList }
-      />
+      <div className="guest-list-carousel">
+        { this.props.guestList.map(( guest ) => {
+            return <GuestCarousel
+              key={ guest.id }
+              name={ guest.name }
+              attendees={ guest.attendees }
+              songRequest={ guest.songRequest }
+              onExiting={ this.onExiting }
+              onExited={ this.onExited }
+              activeIndex={ activeIndex }
+              next={ this.next }
+              prev={ this.prev }
+              goToIndex={ this.goToIndex }
+              guestList={ this.props.guestList }
+            />
+          })
+        }
+      </div>
     )
   }
 }
