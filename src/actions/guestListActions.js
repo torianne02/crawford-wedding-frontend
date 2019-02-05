@@ -1,11 +1,21 @@
-export function fetchGuestList() {
+export const fetchGuestList = () => {
+  let data = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  }
+
   return (dispatch) => {
-    dispatch({type: 'FETCH_GUEST_LIST'});
-    fetch(`http://localhost:3001/attending`, {
-      method: 'GET'
-    })
+    fetch('http://localhost:3001/attending', data)
     .then(response => response.json())
-    .then(guests => dispatch({type: 'ADD_GUEST_LIST_TO_STATE', data: guests}))
+    .then(guests => {
+      dispatch({
+        type: 'FETCH_GUEST_LIST',
+        data: guests
+      })
+    })
     .catch(error => console.log(error));
   }
 }
