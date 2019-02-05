@@ -2,14 +2,14 @@ import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import { connect } from 'react-redux';
 
-const Music = guestList => {
+const Music = rsvps => {
   return (
     <div className="music">
-      { guestList.map(( guest ) => {
+      { rsvps.map(( rsvp ) => {
           return (
             <ListGroup>
               <ListGroupItem>
-                { guest.songRequest }
+                { rsvp.songRequest }
               </ListGroupItem>
             </ListGroup>
           )
@@ -19,8 +19,8 @@ const Music = guestList => {
   );
 }
 
-const mapStateToProps = state => ({
-  guestList: state
-})
+const mapStateToProps = state => {
+  return { rsvps: state.rsvps }
+}
 
 export default connect(mapStateToProps)(Music);
