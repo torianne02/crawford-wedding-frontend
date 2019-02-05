@@ -12,25 +12,29 @@ class GuestListContainer extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchGuestList()
+    this.props.fetchGuestList();
   }
 
   render() {
+    debugger
     return (
       <div className="guestList">
         <h1>Attendees</h1>
-        <GuestList guestList={ this.state.guestList }/>
+        <GuestList
+          guestList={ this.state.guestList }
+        />
       </div>
     )
   }
 }
 
-function mapStateToProps( state ) {
+const mapStateToProps = state => {
+  debugger
   return { guestList: state.guestList }
 }
 
-function mapDispatchToProps( dispatch ) {
-  return { fetchGuestList: () => dispatch(fetchGuestList()) }
-}
+// function mapDispatchToProps( dispatch ) {
+//   return { fetchGuestList: () => dispatch(fetchGuestList()) }
+// }
 
-export default connect( mapStateToProps, mapDispatchToProps )( GuestListContainer )
+export default connect( mapStateToProps, { fetchGuestList } )( GuestListContainer )
