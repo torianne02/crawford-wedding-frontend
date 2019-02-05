@@ -18,7 +18,7 @@ export function createRsvp(rsvp) {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(rsvp)
+      body: JSON.stringify({rsvp: rsvp})
     })
     .then(response => response.json())
     .then(data => dispatch({type: 'ADD_RSVP_TO_STATE', data: data}))
