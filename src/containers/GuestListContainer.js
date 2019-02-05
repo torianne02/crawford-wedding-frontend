@@ -12,15 +12,7 @@ class GuestListContainer extends Component {
   }
 
   componentDidMount() {
-    // let guestList = this.fetchGuestList()
-    // this.setState({
-    //   guestList: guestList
-    // })
-    fetch(`http://localhost:3001/attending`, {
-      method: 'GET'
-    })
-    .then(response => response.json())
-    .then(guestList => this.setState({ guestList }))
+    this.props.fetchGuestList()
   }
 
   render() {
@@ -33,13 +25,12 @@ class GuestListContainer extends Component {
   }
 }
 
-function mapDispatchToProps( dispatch ) {
-  return { fetchGuestList: () => dispatch(fetchGuestList()) }
+function mapStateToProps( state ) {
+  return { guestList: state.guestList }
 }
 
-function mapStateToProps( state ) {
-  debugger
-  return { guestList: state.guestList }
+function mapDispatchToProps( dispatch ) {
+  return { fetchGuestList: () => dispatch(fetchGuestList()) }
 }
 
 export default connect( mapStateToProps, mapDispatchToProps )( GuestListContainer )
