@@ -5,6 +5,7 @@ export function fetchGuestList() {
       method: 'GET'
     })
     .then(response => response.json())
-    .then(data => dispatch({type: 'ADD_GUEST_LIST_TO_STATE', data: data}))
+    .then(guests => dispatch({type: 'ADD_GUEST_LIST_TO_STATE', data: guests}))
+    .catch(error => console.log(error));
   }
 }
