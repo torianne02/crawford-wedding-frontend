@@ -49,7 +49,11 @@ a.nav-link {
   color: #9AB973;
 }
 
-div.card-title {
+.card-body {
+  background-color: #F4F0EC;
+}
+
+.card-title {
   font-family: 'Cookie';
   font-size: 35px;
   margin-bottom: 0px;
