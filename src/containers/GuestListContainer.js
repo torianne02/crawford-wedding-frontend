@@ -4,12 +4,6 @@ import GuestList from '../components/guests/GuestList';
 import { fetchGuestList } from '../actions/guestListActions';
 
 class GuestListContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      guestList: []
-    };
-  }
 
   componentWillMount() {
     this.props.fetchGuestList();
@@ -20,20 +14,19 @@ class GuestListContainer extends Component {
       <div className="guestList">
         <h1>Attendees</h1>
         <GuestList
-          guestList={ this.state.guestList }
+          guestList={ this.props.guestList }
         />
       </div>
     )
   }
 }
 
-const mapStateToProps = state => {
-  debugger
-  return { guestList: state.guestList }
-}
+const mapStateToProps = state => ({
+  guestList: state.guestList.guests
+})
 
 // function mapDispatchToProps( dispatch ) {
 //   return { fetchGuestList: () => dispatch(fetchGuestList()) }
 // }
 
-export default connect( mapStateToProps, { fetchGuestList } )( GuestListContainer )
+export default connect(mapStateToProps, { fetchGuestList })(GuestListContainer)
