@@ -1,9 +1,9 @@
 export default function rsvps( state = {
-  guestList: [],
+  guests: [],
 }, action ) {
   switch ( action.type ) {
     case 'FETCH_GUEST_LIST':
-      return { ...state, guestList: action.data }
+      return { ...state, guests: action.data }
 
     default:
       return state;
