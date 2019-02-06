@@ -1,6 +1,5 @@
 import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
-import { connect } from 'react-redux';
 
 const Music = rsvps => {
   return (
@@ -19,8 +18,4 @@ const Music = rsvps => {
   );
 }
 
-const mapStateToProps = state => {
-  return { rsvps: state.rsvps }
-}
-
-export default connect(mapStateToProps)(Music);
+export default Music
