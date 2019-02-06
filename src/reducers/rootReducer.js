@@ -3,8 +3,8 @@ import rsvps from './rsvps';
 import guestList from './guestList';
 
 const rootReducer = combineReducers({
-  rsvps,
-  guestList
+  rsvps: rsvps,
+  guestList: guestList
 });
 
 export default rootReducer
