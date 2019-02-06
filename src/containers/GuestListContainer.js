@@ -11,12 +11,11 @@ class GuestListContainer extends Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchGuestList();
   }
 
   render() {
-    debugger
     return (
       <div className="guestList">
         <h1>Attendees</h1>
