@@ -1,20 +1,16 @@
 export default function rsvps( state = {
-  isFetchingRsvp: false,
   rsvp: [],
   rsvps: [],
-  rsvpRequestInProgress: false,
 }, action ) {
   switch ( action.type ) {
     case 'FETCH_RSVP':
-      return { ...state, isFetchingRsvp: true, rsvp: [] }
+      return { ...state, rsvp: [] }
     case 'ADD_RSVP_TO_STATE':
-      return { isFetchingRsvp: false, rsvpRequestInProgress: false, rsvp: action.data }
+      return { rsvp: action.data, rsvps: state.rsvps.concat(action.data) }
     case 'FETCH_ALL_RSVPS':
-      return { isFetchingRsvp: true, rsvps: [] }
+      return { ...state, rsvps: [] }
     case 'ADD_ALL_RSVPS_TO_STATE':
-      return { isFetchingRsvp: false, rsvps: action.data }
-    case 'RSVP_REQUEST':
-      return { ...state, rsvpRequestInProgress: true }
+      return { rsvps: action.data }
 
     default:
       return state;
