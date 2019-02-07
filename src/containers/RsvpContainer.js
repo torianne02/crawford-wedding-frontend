@@ -82,10 +82,8 @@ class RsvpContainer extends Component {
 }
 
 // want to add 'thank you ${rsvp.name} for rsvping' card after form submission
-function mapStateToProps( state ){
-  return {
-    rsvps: state.rsvps.rsvp
-  }
+const mapStateToProps = state => {
+  return { rsvps: state.rsvps.rsvp }
 }
 
 export default connect( mapStateToProps, { createRsvp } )( RsvpContainer )

@@ -6,6 +6,7 @@ import { fetchGuestList } from '../actions/guestListActions';
 class GuestListContainer extends Component {
 
   componentWillMount() {
+    debugger
     this.props.fetchGuestList();
   }
 
@@ -21,9 +22,10 @@ class GuestListContainer extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  guestList: state.guestList.guests
-})
+const mapStateToProps = state => {
+  debugger
+  return { guestList: state.guestList.guests }
+}
 
 // function mapDispatchToProps( dispatch ) {
 //   return { fetchGuestList: () => dispatch(fetchGuestList()) }

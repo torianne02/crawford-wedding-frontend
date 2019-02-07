@@ -13,11 +13,9 @@ class MusicContainer extends Component {
 
   componentWillMount() {
     this.props.fetchAllRsvps()
-    debugger
   }
 
   render() {
-    debugger
     return (
       <div className="guestList">
         <h1>Requested Songs</h1>
@@ -27,13 +25,11 @@ class MusicContainer extends Component {
   }
 }
 
-function mapDispatchToProps( dispatch ) {
-  debugger
-  return { fetchAllRsvps: () => dispatch(fetchAllRsvps()) }
-}
+// function mapDispatchToProps( dispatch ) {
+//   return { fetchAllRsvps: () => dispatch(fetchAllRsvps()) }
+// }
 
-function mapStateToProps( state ) {
-  debugger
+const mapStateToProps = state => {
   return { rsvps: state.rsvps }
 }
 
