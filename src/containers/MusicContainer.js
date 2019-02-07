@@ -33,4 +33,4 @@ const mapStateToProps = state => {
   return { rsvps: state.rsvps }
 }
 
-export default connect( mapStateToProps, mapDispatchToProps )( MusicContainer )
+export default connect( mapStateToProps )( MusicContainer )
