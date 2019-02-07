@@ -81,10 +81,10 @@ class RsvpContainer extends Component {
   }
 }
 
-// will display list of people who have responded to rsvps
+// want to add 'thank you ${rsvp.name} for rsvping' card after form submission
 function mapStateToProps( state ){
   return {
-    rsvps: state.rsvps
+    rsvps: state.rsvps.rsvp
   }
 }
 
