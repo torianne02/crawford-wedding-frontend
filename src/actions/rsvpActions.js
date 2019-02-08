@@ -1,14 +1,3 @@
-export function fetchRsvp(id) {
-  return(dispatch) => {
-    dispatch({type: 'FETCH_RSVP'});
-    fetch(`http://localhost:3001/rsvps/${id}`, {
-      method: 'GET'
-    })
-    .then(response => response.json())
-    .then(data => dispatch({type: 'ADD_RSVP_TO_STATE', data: data}))
-  }
-}
-
 export function createRsvp(rsvp) {
   return (dispatch) => {
     dispatch({ type: 'RSVP_REQUEST' })
