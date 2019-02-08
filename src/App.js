@@ -15,11 +15,11 @@ const App = () => {
       <div className="App">
         <NavBar />
         <Switch>
-          <Route path="/attending" component={GuestListContainer} />
-          <Route path="/rsvp" component={RsvpContainer} />
-          <Route path="/details" component={Details} />
-          <Route path="/our-story" component={OurStory} />
-          <Route path="/music" component={MusicContainer} />
+          <Route exact path="/attending" component={GuestListContainer} />
+          <Route exact path="/rsvp" component={RsvpContainer} />
+          <Route exact path="/details" component={Details} />
+          <Route exact path="/our-story" component={OurStory} />
+          <Route exact path="/music" component={MusicContainer} />
         </Switch>
       </div>
     </Router>
