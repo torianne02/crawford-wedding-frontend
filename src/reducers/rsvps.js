@@ -3,8 +3,6 @@ export default function rsvps( state = {
   rsvps: [],
 }, action ) {
   switch ( action.type ) {
-    case 'FETCH_RSVP':
-      return { ...state, rsvp: [] }
     case 'ADD_RSVP_TO_STATE':
       return { rsvp: action.data, rsvps: state.rsvps.concat(action.data) }
     case 'FETCH_ALL_RSVPS':
