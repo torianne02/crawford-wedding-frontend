@@ -1,13 +1,13 @@
 import React from 'react';
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import Song from './Song';
 
 const MusicList = ({ rsvps }) =>
   <div className="music">
     { rsvps.map(( rsvp ) => {
-      if (rsvp.songRequest != "") {
+      if (rsvp.song_request !== "") {
         return <Song
           key={ rsvp.id }
-          name={ rsvp.songRequest }
+          songTitle={ rsvp.song_request }
         />
       }
     }) }
