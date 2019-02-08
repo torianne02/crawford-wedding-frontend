@@ -13,6 +13,7 @@ class RsvpContainer extends Component {
       accept: 'accepts',
       songRequest: '',
       attendees: 0,
+      submitted: false
     };
     this.handleOnChange = this.handleOnChange.bind(this);
   }
@@ -41,12 +42,8 @@ class RsvpContainer extends Component {
         accept: '',
         attendees: 0,
         songRequest: '',
+        submitted: true,
       })
-      return (
-        <ThankYou
-          name={this.props.rsvp.name}
-        />
-      )
     }
   }
 
@@ -69,6 +66,14 @@ class RsvpContainer extends Component {
     }
   }
 
+  renderThankYou() {
+    return (
+      <ThankYou
+        rsvp={ this.props.rsvp }
+      />
+    )
+  }
+
   render() {
     return (
       <div className="rsvp-form">
@@ -82,6 +87,7 @@ class RsvpContainer extends Component {
           handleOnChange={ this.handleOnChange }
           handleOnSubmit={ this.handleOnSubmit }
         />
+        { this.state.submitted && this.renderThankYou() }
       </div>
     )
   }
