@@ -3,13 +3,11 @@ import Song from './Song';
 
 const MusicList = ({ rsvps }) =>
   <div className="music">
-    { rsvps.map(( rsvp ) => {
-      if (rsvp.song_request !== "") {
-        return <Song
-          key={ rsvp.id }
-          songTitle={ rsvp.song_request }
-        />
-      }
+    { rsvps.filter(rsvp => rsvp.song_request !== "").map(( rsvp ) => {
+      return <Song
+        key={ rsvp.id }
+        songTitle={ rsvp.song_request }
+      />
     }) }
   </div>
 
