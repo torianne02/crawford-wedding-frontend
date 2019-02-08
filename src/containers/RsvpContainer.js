@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RsvpForm from '../components/rsvps/RsvpForm';
+import ThankYou from '../components/rsvps/ThankYou';
 import { createRsvp } from '../actions/rsvpActions';
 import { connect } from 'react-redux';
 
@@ -41,6 +42,11 @@ class RsvpContainer extends Component {
         attendees: 0,
         songRequest: '',
       })
+      return (
+        <ThankYou
+          name={this.props.rsvp.name}
+        />
+      )
     }
   }
 
@@ -83,7 +89,7 @@ class RsvpContainer extends Component {
 
 // want to add 'thank you ${rsvp.name} for rsvping' card after form submission
 const mapStateToProps = state => {
-  return { rsvps: state.rsvps.rsvp }
+  return { rsvp: state.rsvps.rsvp }
 }
 
 export default connect( mapStateToProps, { createRsvp } )( RsvpContainer )
