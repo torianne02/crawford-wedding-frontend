@@ -10,7 +10,7 @@ export default function rsvps( state = {
     case 'FETCH_ALL_RSVPS':
       return { ...state, rsvps: [] }
     case 'ADD_ALL_RSVPS_TO_STATE':
-      return { rsvps: action.data }
+      return { ...state, rsvps: action.data }
 
     default:
       return state;
