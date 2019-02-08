@@ -1,13 +1,11 @@
 import React from 'react';
-import { Card, CardText, CardBody } from 'reactstrap';
+import { Alert } from 'reactstrap';
 
 const ThankYou = ({ rsvp }) =>
   <div className="thank-you">
-    <Card className="thank-you-card">
-      <CardBody>
-        <CardText>Thank you { rsvp.name }!</CardText>
-      </CardBody>
-    </Card>
+    <Alert color="info">
+      Thank you { rsvp.name }!
+    </Alert>
   </div>
 
 export default ThankYou
