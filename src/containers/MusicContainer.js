@@ -20,7 +20,7 @@ class MusicContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  return { rsvps: state.rsvps }
+  return { rsvps: state.rsvps.rsvps }
 }
 
 export default connect( mapStateToProps, { fetchAllRsvps } )( MusicContainer )
