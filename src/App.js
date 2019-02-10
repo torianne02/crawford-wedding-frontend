@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import GuestListContainer from './containers/GuestListContainer';
 import RsvpContainer from './containers/RsvpContainer';
 import NavBar from './components/NavBar';
-// import Home from './components/Home';
+import Home from './components/Home';
 import Details from './components/Details';
 import OurStory from './components/OurStory';
 import MusicContainer from './containers/MusicContainer';
@@ -20,6 +20,7 @@ const App = () => {
           <Route exact path="/details" component={Details} />
           <Route exact path="/our-story" component={OurStory} />
           <Route exact path="/music" component={MusicContainer} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </div>
     </Router>
@@ -27,5 +28,3 @@ const App = () => {
 }
 
 export default App;
-
-// <Route exact path="/" component={Home} />
