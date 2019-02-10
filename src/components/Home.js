@@ -5,7 +5,9 @@ console.log(background)
 
 const Home = () => {
   return (
-    <img src={background} alt="Kevin and Tori" />
+    <div class="background-image">
+      <img src={background} alt="Kevin and Tori" />
+    </div>
   )
 }
 
