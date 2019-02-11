@@ -11,6 +11,7 @@ export function createRsvp(rsvp) {
     })
     .then(response => response.json())
     .then(data => dispatch({type: 'ADD_RSVP_TO_STATE', data: data}))
+    .catch(error => console.log(error));
   }
 }
 
@@ -22,5 +23,6 @@ export function fetchAllRsvps() {
     })
     .then(response => response.json())
     .then(data => dispatch({type: 'ADD_ALL_RSVPS_TO_STATE', data: data}))
+    .catch(error => console.log(error));
   }
 }
