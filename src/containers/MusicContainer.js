@@ -5,7 +5,7 @@ import { fetchAllRsvps } from '../actions/rsvpActions';
 
 class MusicContainer extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchAllRsvps()
   }
 
