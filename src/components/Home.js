@@ -3,7 +3,7 @@ import background from '../images/background.jpg'
 
 const Home = () => {
   return (
-    <div class="background-image">
+    <div className="background-image">
       <img src={background} alt="Kevin and Tori" />
     </div>
   )
