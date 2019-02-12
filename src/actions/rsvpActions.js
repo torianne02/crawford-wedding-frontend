@@ -1,7 +1,7 @@
 export function createRsvp(rsvp) {
   return (dispatch) => {
     dispatch({ type: 'RSVP_REQUEST' })
-    return fetch(`http://localhost:3001/rsvps`, {
+    fetch(`http://localhost:3001/rsvps`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
