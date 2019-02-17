@@ -69,13 +69,7 @@ class RsvpContainer extends Component {
 
   renderThankYou() {
     return (
-      <Redirect to={{
-        pathname: '/thank-you',
-        state: {
-          name: this.state.name
-        }
-      }}
-      />
+      <Redirect to='/thank-you' />
     )
   }
 
