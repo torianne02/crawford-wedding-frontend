@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Details from './components/Details';
 import OurStory from './components/OurStory';
 import MusicContainer from './containers/MusicContainer';
+import ThankYou from './components/rsvps/ThankYou';
 import './App.css';
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Route exact path="/our-story" component={OurStory} />
           <Route exact path="/music" component={MusicContainer} />
           <Route exact path="/" component={Home} />
+          <Route exact path='/thank-you' component={ThankYou} />
         </Switch>
       </div>
     </Router>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import RsvpForm from '../components/rsvps/RsvpForm';
-import ThankYou from '../components/rsvps/ThankYou';
+// import ThankYou from '../components/rsvps/ThankYou';
 import { createRsvp } from '../actions/rsvpActions';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 class RsvpContainer extends Component {
   constructor(props) {
@@ -68,9 +69,7 @@ class RsvpContainer extends Component {
 
   renderThankYou() {
     return (
-      <ThankYou
-        rsvp={ this.props.rsvp }
-      />
+      <Redirect to='/thank-you' />
     )
   }
 
