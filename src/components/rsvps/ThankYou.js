@@ -17,6 +17,7 @@ class ThankYou extends Component {
               If the below information is incorrect, please reach out to Victoria
               and/or Kevin.
             </CardText>
+
             <CardSubtitle>RSVP Status:</CardSubtitle>
             <CardText>{this.props.rsvp.accept}</CardText>
             <CardSubtitle>Number of Guests Attending:</CardSubtitle>
