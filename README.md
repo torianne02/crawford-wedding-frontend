@@ -18,8 +18,8 @@ Change directory by running `$ cd crawford-wedding-frontend`
 
 Then, run the following:
 ``` ruby
-$ run npm install
-$ run npm start
+$ npm install
+$ npm start
 ```
 
 ## Contributing
