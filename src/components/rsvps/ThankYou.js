@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 
 class ThankYou extends Component {
   render() {
-    debugger;
     return (
       <div className="thank-you">
         <Card>
