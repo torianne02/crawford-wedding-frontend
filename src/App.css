@@ -1,92 +1,92 @@
 @import url('http://fonts.googleapis.com/css?family=Great+Vibes');
 @import url('http://fonts.googleapis.com/css?family=Cookie');
 @import url('http://fonts.googleapis.com/css?family=Montserrat');
-
 .App {
-  text-align: center;
-  font-family: 'Montserrat';
+    text-align: center;
+    font-family: 'Montserrat';
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 nav.navbar {
-  background-color: transparent;
-  margin-bottom: 5px;
+    background-color: transparent;
+    margin-bottom: 5px;
 }
 
 a.navbar-brand {
-  font-family: 'Great Vibes';
-  font-size: 45px;
-  color: #FFB7CC;
+    font-family: 'Great Vibes';
+    font-size: 45px;
+    color: #FFB7CC;
 }
 
 a.nav-link {
-  color: #9AB973;
+    color: #9AB973;
 }
 
 .card-body {
-  background-color: #F4F0EC;
+    background-color: #F4F0EC;
 }
 
 .card-title {
-  font-family: 'Cookie';
-  font-size: 35px;
-  margin-bottom: 0px;
-  color: #967BB6;
+    font-family: 'Cookie';
+    font-size: 35px;
+    margin-bottom: 0px;
+    color: #967BB6;
 }
 
 p#detail-label {
-  font-size: 22px;
-  color: #848482;
-  margin-bottom: 0px;
+    font-size: 22px;
+    color: #848482;
+    margin-bottom: 0px;
 }
 
 p.card-text {
-  font-size: 15px;
-  margin-bottom: 5px;
+    font-size: 15px;
+    margin-bottom: 5px;
 }
 
-h1, h3 {
-  font-family: 'Cookie';
-  font-size: 65px;
-  color: #967BB6;
+h1,
+h3 {
+    font-family: 'Cookie';
+    font-size: 65px;
+    color: #967BB6;
 }
 
 img {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%;
+    height: auto;
 }
 
 p.card-text {
-  margin-bottom: 10px;
-  margin-top: 3px;
+    margin-bottom: 10px;
+    margin-top: 3px;
 }
